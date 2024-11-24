@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "416628595193",
+    "project_id": "everdeals-84870",
+    "storage_bucket": "everdeals-84870.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416628595193:android:aef487071e0fb5d4ccc528",
+        "android_client_info": {
+          "package_name": "pablo.ruiz.authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416628595193-aog9g8sl5gi1p9as35itv76ore9snoda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCusFstEUlkq195WCWGcH54B51hKVkTdYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416628595193-aog9g8sl5gi1p9as35itv76ore9snoda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416628595193:android:30cd34460ff6ca97ccc528",
+        "android_client_info": {
+          "package_name": "pablo.ruiz.authentication_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416628595193-aog9g8sl5gi1p9as35itv76ore9snoda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCusFstEUlkq195WCWGcH54B51hKVkTdYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416628595193-aog9g8sl5gi1p9as35itv76ore9snoda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416628595193:android:b69846c570fd4274ccc528",
+        "android_client_info": {
+          "package_name": "pablo.ruiz.everdeals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416628595193-aog9g8sl5gi1p9as35itv76ore9snoda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCusFstEUlkq195WCWGcH54B51hKVkTdYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416628595193-aog9g8sl5gi1p9as35itv76ore9snoda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
