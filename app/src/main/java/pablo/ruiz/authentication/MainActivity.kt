@@ -1,15 +1,11 @@
 package pablo.ruiz.authentication
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
+import androidx.navigation.compose.rememberNavController
 import com.google.firebase.auth.FirebaseAuth
-import pablo.ruiz.authentication.AuthScreen
-import pablo.ruiz.authentication.HomeScreen
 import pablo.ruiz.authentication.ui.theme.AuthenticationTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,18 +21,20 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun AuthenticationApp() {
+    val navController = rememberNavController()
     var isUserLoggedIn by remember { mutableStateOf(false) }
     val auth = FirebaseAuth.getInstance()
 
-    if (auth.currentUser != null) {
-        isUserLoggedIn = true
+    LaunchedEffect(auth) {
+        isUserLoggedIn = auth.currentUser != null
     }
 
     if (isUserLoggedIn) {
-        // Navigate to Home Screen
-        HomeScreen()
+        HomeScreen(navController = navController)
     } else {
-        // Show Authentication Screen
-        AuthScreen(onAuthSuccess = { isUserLoggedIn = true })
+        AuthScreen(onAuthSuccess = {
+            isUserLoggedIn = true
+            navController.navigate("home")
+        })
     }
 }

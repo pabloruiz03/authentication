@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.gms.google-services") version "4.4.2" // Actualizado a la versión más reciente
+    id("com.google.gms.google-services") version "4.4.2" apply false
 }
 
 android {
@@ -30,11 +30,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 
     buildFeatures {
@@ -52,6 +52,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.navigation.common.ktx)
+    implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -59,7 +61,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
+    implementation(libs.ui)
+    implementation(libs.maps.compose.v100)
     // Firebase BOM
     implementation(platform(libs.firebase.bom))
 
@@ -67,8 +70,12 @@ dependencies {
     implementation(libs.firebase.auth)
 
     // Google Maps Compose Library
-    implementation(libs.maps.compose) // Añadido para soporte de Jetpack Compose con Google Maps
+    implementation(libs.maps.compose)
     implementation(libs.play.services.location)
+
+    // Media3 ExoPlayer
+    implementation(libs.media3.exoplayer)
+    implementation(libs.media3.ui)
 }
 
 apply(plugin = "com.google.gms.google-services")
